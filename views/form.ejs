@@ -1,0 +1,82 @@
+<div class="theForm">
+     <strong id="plane3">✈</strong>
+
+    <form action="/getFlight" method="GET" id="form">
+        <!-- <input class="form-check-input" type="radio" name="radio" id="radio1" default="selected" checked>
+        <label class="form-check-label" for="radio1">
+          One Way
+        </label> -->
+        <input class="form-check-input" type="radio" name="radio" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="radio">
+          One way
+        </label>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <!-- <input class="form-check-input" type="radio" name="radio" id="radio2" checked>
+        <label class="form-check-label" for="radio2">
+         Two Way
+        </label> -->
+        <!-- <label class="form-check-label" for="currency" style="display: inline;" >
+          Currency
+         </label>  -->
+
+       
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6  box fifty" >
+                 <h6>From</h6>
+                 <input type="text" class="form-control" placeholder="Eg. London" name="from" >
+            </div>
+            <div class="col-lg-3  col-md-6 col-sm-6  col-xs-6  box fifty">
+                 <h6>To</h6>
+                 <input type="text" class="form-control" placeholder="Eg. Las Vegas" name="to">
+            </div>
+            <div class="col-lg-2  col-md-3 col-sm-6 box">
+                 <h6>Outbound</h6>
+                 <!-- <input type="date" class="form-control" onfocus="(this. type='date')" > -->
+                 <input placeholder="Outbound Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="outdate" name="outDate" />
+            </div>
+            <div class="col-lg-2  col-md-3 col-sm-6 box">
+                 <h6>Currency</h6>
+                 <!-- <input placeholder="Inbound Date" class="form-control" id="inb" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="indate" name="inDate"/> -->
+                 <!-- <input type="date" class="form-control" placeholder="enter" > -->
+                 <select class="form-select" placeholder="Eg. INR" name="currency" id="currency" >
+                    <option value="1">INR</option>
+                    <option value="2">USD</option>
+                    <option value="3">EUR</option>
+                  </select>
+            </div>
+            <div class="col-lg-2  col-md-6 col-sm-6 box fifty">
+                 <h6>No. Of Passengers</h6>
+                 <input type="number" class="form-control" placeholder="Eg. 2 " min="1" name="noOfPass" >
+            </div>
+            <div class="col-lg-3  col-md-6  col-sm-6 box fifty">
+                 <h6>No. Of Adults</h6>
+                 <input type="number"   class="form-control" placeholder="Eg.1 " min="1" name="adults" >
+            </div>
+            <div class="col-lg-3  col-md-6 col-sm-6 box fifty">
+                 <h6>No. Of Children</h6>
+                 <input type="number" class="form-control" placeholder="Eg.1 " min="0" name="children" >
+            </div>
+            <div class="col-lg-3  col-md-6 col-sm-6 box fifty">
+                 <h6>Cabin Class</h6>
+                 <select class="form-select " placeholder="Eg. Economy" name="eclass" >
+                    <option value="1">Economy</option>
+                    <option value="2">Business</option>
+                    <option value="3">First</option>
+                  </select>
+                 <!-- <input type="text" class="form-control" placeholder="Eg. Economy" name="eclass" > -->
+            </div>
+            <div class="col-lg-3  col-md-6  ">
+                 <button type="submit" class="btn submitBtn btn-outline-dark">Search</button>
+            </div>
+        </div>
+    </div>
+    </form>
+
+
+    </section>
+<hr class="dottedLine">
+
+

@@ -1,0 +1,892 @@
+/* the entire document and body styling */
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'STIX Two Text', serif;
+}
+
+/* the first section with the nav and form styling*/
+.section1{
+    height: 600px;
+    background-image: url("https://images.unsplash.com/photo-1593182440709-4b7b56482c55?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: top;
+    position: relative;
+    padding: 3%;
+    padding-top: 2%;
+}
+
+/* Logo BookWithUs styling*/
+nav h1{
+    display: inline-block;
+    font-size: 2rem;
+    z-index: 31;
+}
+/* nav ul styling*/
+nav ul{
+    display: inline-block;
+    width: 60%;
+    margin-left: 10.3%;  
+    z-index: 10;
+}
+/* nav ul li's styling  */
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 2%;
+    padding-bottom:1%; 
+    margin-right: 5%;
+    font-size:1.1rem ;
+    z-index: 10;
+
+}
+/* anchor tag of the nav styling  */
+a{
+   text-decoration: none;
+   color:#57837B;
+   position: relative;
+}
+/* anchor tag of the nav styling  when hovered*/
+a:hover{
+    color:#444941;
+}
+/* insert a straight line (absolute) like underline after the anchor element of width 0 */
+a::after{
+    content: "";
+    position: absolute;
+    background-color: #57837B;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+/*when a is hovered make the width of a a after element 100 by transition  */
+a:hover::after{
+    width: 100%;
+    color: #57837B;  
+ }
+ /* styling of the call us button of the nav  */
+.contactBtn{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 31;
+}
+/* the entire drop down nav div  */
+.dropdown{
+    margin: 0;
+    background-color:#F4DFD0;
+    background-color: #F8EDED;
+    position: absolute;
+    right: 0;
+    width:100%;
+    height: 470px;
+    top:0;
+    overflow: none;
+    z-index: 30;
+    /* opacity: 0.8; */
+}
+/* the entire drop down nav div ul  */
+.dropdown ul{
+    list-style: none;
+    text-align:center;
+    margin-top: 15%;
+}
+/* the entire drop down nav div li's of ul  */
+.dropdown ul li{
+    margin: auto;
+   margin-top:1% ;
+   font-size: 20px;
+   border-bottom: 1px solid black;
+   width: 40%;
+   padding: 2%;
+}
+/* the toggle bar icon styling  */
+.spinner{
+    z-index:31;  
+    border-bottom: 3.5px solid black;
+    width: 26px;
+    height: 9px;
+    margin-right: 28px;
+}
+/* checkbox to open side bar menu  */
+#opensidebarmenu{
+    z-index:31;  
+    cursor: pointer;
+    position: absolute;
+    right: 7%;
+    top: 8%;
+    display: none;
+  }
+/* toggle button styling  */
+  .sidebarmenutoggle{
+    z-index:31;  
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    padding: 1%;
+    top: 4.5%;
+    display: none;
+  }
+/* the toggle menu when opened  */
+.sidetoggleopenmenu{
+      position: fixed;
+      padding-top: 3%;
+      display: none;
+      transform: translateY(-470px);      
+      transition: transform 300ms ease-in-out;
+}  
+/* styling for hiding the side opened toggle menu on checkbox  */
+#opensidebarmenu:checked ~ .sidetoggleopenmenu{
+        transform: translateY(0px); 
+}
+.ddclose{
+    transform: translateY(-470px); 
+}
+/* styling of the quote on the left of section 1  */
+.quote{
+    position: relative;
+    top: 2%;
+}
+/* styling the lines of the quote on the left of section 1  */
+.quote h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+/* styling the first 2 lines of the quote on the left of section 1  */
+.quote1{
+    color:#8E2657;
+}
+/* styling the last 2 lines of the quote on the left of section 1  */
+.quote1_1{
+    color:#22577A;
+}
+/* planes on the hr line  */
+.myplane{
+    position: relative;
+    margin-top: 4%;
+    height: 20px;
+}
+/* adding animation to the plane in the logo  */
+#plane{
+    position: absolute;
+    top: -124%;
+    animation-name: plane;
+    animation-duration: 7s ;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    font-size: 35px;
+    z-index: 20;
+    color: #1E3163;
+    animation-play-state: running;
+    animation-delay: 2s;
+    }
+@keyframes plane{
+    0%{
+        left: 0%;
+    }
+      100%{
+        left: 100%;  
+      }
+}
+/* animation and styling of moving plane 1  */
+#plane1{
+    animation-delay: 5s;
+    top: -124%;
+    position: absolute;
+    animation-name:plane1;
+    animation-duration: 12s ;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    font-size: 35px;
+    z-index: 20;
+    color: #1E3163;
+    animation-play-state: running;
+    }
+@keyframes plane1{
+    0%{
+        left: 0%;
+    }
+      100%{
+        left: 100%;  
+      }
+}
+
+/* plane icon on the form line  */
+#plane3{
+    position: absolute;
+    left: 45%;
+    top: -10%;
+    font-size: 35px;
+    z-index: 20;
+    color: #1E3163;
+    color: black;
+    margin-left: 1%;
+    }
+/* stationary plane icon on the hr line  */
+#plane4{
+    top: -124%;
+    position: absolute;
+    font-size: 35px;
+    color: #1E3163; 
+}
+/* the actual form styling  */
+.theForm{
+    background-image: url("https://images.unsplash.com/photo-1591395896364-6db656ac5c2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
+    margin-top: 1.5%;
+    padding: 1% 2%;
+    font-size: 18px;
+    border: 2px solid #57837B ;
+    box-shadow: 2px 2px 2px #57837B;
+    position: relative;
+    color: white;
+}
+/* styling of every input except radio buttons */
+ .box{
+     padding: 0;
+     margin-top:2%;
+ }
+/* styling of the form submit btn */
+ .submitBtn{
+     margin: 1%;
+     margin-top: 19%;
+     /* margin-left: %; */
+     text-align: center;
+     align-items: center;
+     width: 200px;  
+ }
+ /* the second section  */
+ .invite{
+     height: 500px;
+     padding: 4%;
+     padding: 12% 6%;
+     position: relative;
+     overflow: hidden;   
+ }
+ /* Image inside Section 2  */
+ #vacation{
+     position: absolute;
+     top: 18%;
+     right: 8%;
+     border-radius: 100%;
+     height: 370px;
+     width: 370px;
+     border: 1px solid #5F7A61;
+ }
+ /* the text in section 2  */
+ .inviteText{
+     background-color: aliceblue;
+     display: inline-block;
+     padding: 2%;
+     padding-left: 5%;
+     width: 52%;
+     height: 270px;
+     font-size: 42px;
+ }
+ /* the name in the secion 2  */
+ .inviteText  i{
+     color: red;
+ }
+ /* the semi circle around the image  */
+ .circleLine{
+     position: absolute;
+     overflow: hidden;
+     right: -15%;
+     top: 0;
+     border: 1px solid #5F7A61;
+     height: 550px;
+     width: 500px;
+     border-radius: 100%;
+     overflow: hidden;
+ }
+ /* the line afer ever section */
+ hr{
+    width: 50%;
+    align-items: center;
+    align-self: center;
+    margin: 4% auto;
+}
+/* section 3 with all travel styles  */
+.travelStyle{
+    text-align: center;
+    margin-top: 7%;
+    position: relative;
+}
+/* the div of each travel style  */
+.styles{
+    height: 450px;
+    width: 25%;
+    margin: 2%;
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #7FC8A9;
+    box-shadow: 3px 4px 4px #7FC8A9;
+    position: relative;
+}
+/* the div of each travel style when hovered */
+.styles:hover{
+    border: 2px solid blueviolet;  
+}
+/* main heading og section 2  */
+.Sec2Head{
+    width: 30%;
+    margin: 2% auto;
+    font-family: 'Bad Script', cursive;
+}
+/* the explore written in each divs of travel style  */
+.travelStyle h3{
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    height: 45px;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Bad Script', cursive;
+    padding-top: 2%;
+}
+/* name of each div  */
+.insideBox{
+    height: 40px;
+    font-family: 'Bad Script', cursive;
+    padding-top: 5%;
+}
+/* family trip div one  */
+.style1{
+    background-image: url("https://images.unsplash.com/photo-1587654542342-c6f9bf970132?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+}
+/* solo trip div 2 */
+.style2{
+    position: relative;
+    padding-top: 10%;
+    background-image: url("https://images.unsplash.com/photo-1583838812711-91e66580f5e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80");
+}
+/* solo written on solo trip div */
+.style2box{
+    position: absolute;
+    top: 0;
+    font-family: 'Bad Script', cursive;
+    padding: 4%;
+    width: 100%;
+}
+/* honeymoon trip div 3 */
+.style3{
+    background-image: url("https://images.unsplash.com/photo-1591030288156-ededef494ec4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    background-image: url("https://images.unsplash.com/photo-1623137285582-8a3608b5ff09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"); 
+}
+/* the long hr line in the travel style section  */
+.longLine{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+/* section 3 the contact section  */
+.contact{
+    height: 500px;
+    background-color: aliceblue;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    position: relative;
+}
+/* the div of the text on the contact section */
+.contactLeft{
+    display: inline-block;
+    height:150px ;
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    left: 5%;
+}
+/* the red text in the div of the text on the contact section  */
+.contactLeft b{
+  color: red;
+}
+/* the picture on the right of contact section  */
+.contactRight{
+    height: 500px;
+    display: inline-block;
+    background-color: #1E3163;
+    background-image: url("https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    width: 55%;
+    position: absolute;
+    right: 0;
+}
+/* section 3 the footer  */
+.myFooter{
+    height: 150px;
+    background-color: #7FC8A9;
+}
+/* div inside the footer section containing all elements */
+.footer{
+    background-color: #66BFBF;
+    height: 200px;
+}
+/* anchor tags of the footer section  */
+.footer a{
+    text-decoration: none;
+    color: #11999E;
+    font-size: 1.7vw;
+    display: inline-block;
+    margin: 3% 5% 3% 5%;   
+}
+/* anchor tags of the footer section when hovered  */
+.footer a:hover{
+  text-decoration: none;
+  color: white;
+  font-size: 1.7vw;
+  display: inline-block;
+  margin: 1% 5% 3% 5%;
+  margin-top: 1%;   
+}
+/* the first link of the footer section  */
+#link1{
+  margin-left: 25%;
+}
+/* the copywright at the end of the section  */
+.footer p{
+  color: white;
+  text-align: center;
+  margin-top: 3%;
+  font-size: 1.4vw;
+}
+/* the dotted hr line  */
+.dottedLine{
+    border-style: dotted none none none;
+    border-color: grey;
+    background-color: white;
+    border-width: 8px;
+    width: 10%;
+}
+.page2Content{
+    padding: 3%;
+    padding-bottom: 1%;
+    /* background-color: aliceblue; */
+    text-align: center;   
+}
+.page2Heading{
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Nunito', sans-serif;
+}
+.priceBox{
+    margin: 5% auto;
+}
+.pricingTable{
+    padding: 2% 10%;
+}
+.card-body h2{
+    margin: 24px;
+}
+.places{
+    height: 450px;
+    padding: 2%;
+    position: relative;
+    margin-bottom: 10%;
+}
+.row{
+    padding: 2% 4%;
+    padding-left: 8%;
+    
+}
+.places div p{
+    font-size: 14px;
+}
+.card-body a{
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+}
+.Tlocations h1{
+    padding-top: 3%;
+    padding-bottom: 5%;
+    font-family: 'Bad Script', cursive;
+    text-align: center;
+}
+.knbtn{
+    text-transform: uppercase;
+    transform: translateX(40%);
+    font-size: 20px;
+    width: 55%;
+    height: 40px;
+    background-color: #11999E;
+    padding: 3%;
+    text-align: center;
+}
+.knbtn a{
+    color: white;
+    text-align: center;
+    padding-left: 3%;
+}
+.card-body p{
+font-size: 18px;
+}
+.card{
+    /* border: 1px solid gray; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover{
+    border: 2px solid #11999E;
+}
+.page3content{
+    /* background-color: #11999E; */
+    margin-top: 5%;
+}
+.page3content h1{
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+    font-size: 70px;
+}
+.page3content p{
+font-size: 20px;
+padding: 2%;
+text-align: justify;
+}
+.page3img{
+    float: right;
+    height: 450px;
+    width: 400px;  
+    margin: 2%;
+}
+/* Media query for medium devices  */
+@media (min-width:560px) and  (max-width:992px){
+/* entire section 1 */
+.section1{
+        height: 960px;
+    }
+/* nav logo BookWithUs styling */
+nav h1{
+    display: inline-block;
+    font-size: 2rem;
+    position: absolute;
+    top: 6%;
+      }
+/* nav ul styling */
+nav ul {
+    display: none;  
+      }
+/* checkbox for toggle */
+#opensidebarmenu{
+    display: block;
+    visibility: hidden;
+      }
+/* individual toggle lines styling */
+.sidebarmenutoggle{
+    cursor: pointer;
+    display: inline-block;
+      }
+/* the dropdown toggle menu  */
+.sidetoggleopenmenu{
+    display: block;
+    padding: 2%;
+    }  
+/* call us button    */
+.contactBtn{
+    position: absolute;
+    right: 15%;
+    top: 5.3%;
+    }
+/* entire quote div on the left of section 1 */
+.quote{
+    position: relative;
+    top: 16%;
+    }
+/* each quote h1 on the left of section 1 */
+.quote h1{
+    margin-bottom: 0;      
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    }
+/* the entire form  */
+.theForm{
+     margin-top: 19%;
+     padding: 2%;
+     padding-left: 2%;
+     margin-top: 27%;
+     height: 520px;
+    }
+/* each input of the form excepr radio buttons  */
+.box{
+    padding: 1%;
+    margin-top:0.5%;
+    }
+/* class added to input boxes that should take 50% width on medium screen  */
+.fifty{
+        width: 50%;
+    }
+/* submit button of the form  */
+.submitBtn {
+        margin: 9% auto 0 auto;
+    }
+/* plane icon on the form line  */
+#plane3{
+       top: -4.5%;
+        }
+/* section 2 the invite  */
+.invite{
+    height: 430px;
+    padding: 12% 6%;
+    padding-left: 2%;  
+}
+/* Image inside Section 2  */
+#vacation{
+    top: 18%;
+    right: 8%;
+    height: 240px;
+    width: 240px;
+}
+ /* the text in section 2  */
+ .inviteText{
+    /* background-color: #1E3163; */
+    display: inline-block;
+    padding-top: 4%;
+    padding-left: 3%;
+    width: 50%;
+    font-size: 30px;
+    height: 280px;
+}
+/* the semicircle behind the image in section 2  */
+.circleLine{
+    right: -20%;
+    top: 7%;
+    height: 350px;
+    width: 350px;
+}
+/* planes on the hr line  */
+.myplane{
+    margin-top: 5%;
+}
+/* the travel style section's individual div's  */
+.styles{
+    height: 350px;
+    width: 25%;
+    margin: 2%;
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #7FC8A9;
+    box-shadow: 3px 4px 4px #7FC8A9;
+    position: relative;
+}
+/* section 3  contact us  */
+.contact{
+    height: 300px;  
+}
+/* the text div in the contact section   */
+.contactLeft{
+    top: 20%;
+}
+/* the picture div in the contact section  */
+.contactRight{
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.page3content{
+    /* background-color: #11999E; */
+    margin-top: 18%;
+}
+.page3content h1{
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+    font-size: 50px;
+}
+.page3content p{
+font-size: 18px;
+padding: 2%;
+text-align: justify;
+}
+.page3content img{
+    height: 350px;
+    width: 300px;
+    }
+}
+
+
+
+
+
+
+/* media query for small devices  */
+@media (max-width:560px)
+{
+/* nav logo BookWithUs styling */
+nav h1{
+    display: inline-block;
+    font-size: 2rem;
+    position: absolute;
+    top: 4%;
+        }
+/* nav ul styling */
+nav ul {
+    display: none;  
+      }
+/* checkbox for toggle */
+#opensidebarmenu{
+    display: block;
+    visibility: hidden;
+      }
+/* individual toggle lines styling */
+.sidebarmenutoggle{
+    cursor: pointer;
+    display: inline-block;
+      }
+/* the dropdown toggle menu  */
+.sidetoggleopenmenu{
+    display: block;
+    } 
+/* the ul of the dropdown menu  */
+.dropdown ul{
+    list-style: none;
+    text-align:center;
+    margin-top: 30%;
+    }
+/* the callus button     */
+.contactBtn{
+    left: 4%;
+    top: 8%;
+    }
+/* the entie quote div of the left side of section 1 */
+.quote{
+    position: relative;
+    top: 16%;
+    }
+/* each quote h1 on the left of section 1 */
+.quote h1{
+    margin-bottom: 0;      
+    font-family: 'Nunito', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    }
+.theForm{
+    /* margin-top: 1125%; */
+    padding: 5%;
+    padding-left: 8%;
+    margin-top: 55%;
+    height: 495px;
+   }
+/* entire section 1 */
+.section1{
+    height: 925px;
+   }
+/* class added to input boxes that should take 50% width on medium screen  */
+.fifty{
+    width: 50%;
+   }
+/* submit button of the form  */
+.submitBtn {
+    margin:  6% auto 0 auto;
+   }
+/* plane icon on the form line  */
+#plane3{
+    top: -4.4%;
+     }
+/* section 2 the invite  */
+.invite{
+    height: 350px;
+    padding: 12% 6%;
+    padding-left: 2%;  
+    }
+/* Image inside Section 2  */
+#vacation{
+    top: 18%;
+    right: 8%;
+    height: 140px;
+    width: 140px;
+    }
+ /* the text in section 2  */
+ .inviteText{
+    background-color: aliceblue;
+    display: inline-block;
+    padding:2%;
+    width: 52%;
+    height: 210px;
+    font-size: 22px;
+}
+/* the circle line in section 2 */
+.circleLine{
+    right: -30%;
+    top: 7%;
+    height: 250px;
+    width: 250px;
+    }
+/* planes on the hr line  */
+.myplane{
+    margin-top: 7%;
+}
+/* adding animation to the plane in the logo  */
+#plane{
+    animation-duration: 5s;
+    animation-delay: 2s;
+    }
+/* animation and styling of moving plane 1  */
+#plane1{
+    animation-delay: 5s;
+    animation-duration: 8s ;
+    }
+/* the individual travel style div in travel section  */
+.styles{
+        height: 200px;
+        width: 50%;
+        margin: 2%;
+    }
+/* the long hr line in the travel section  */
+.longLine{
+        width: 100%;
+        position: absolute;
+        top: 56%;
+    }
+/* section 3 contact  */
+    .contact{
+        height: 310px;  
+    }
+/* the text div of the contact section  */
+    .contactLeft{
+        top: 20%;
+    }
+/* the picture div of the contact section  */
+    .contactRight{
+        height: 310px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .page3content{
+        /* background-color: #11999E; */
+        margin-top: 30%;
+    }
+    .page3content h1{
+        text-align: center;
+        font-family: 'Bad Script', cursive;
+        font-size: 40px;
+    }
+    .page3content p{
+    font-size: 16px;
+    padding: 2%;
+    text-align: justify;
+    }
+    .page3content img{
+        height: 250px;
+        width: 200px;
+        }
+}

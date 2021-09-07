@@ -1,0 +1,43 @@
+<body>
+
+    <section class="section1">
+    <nav>
+        <h1>Book with Us ✈ </h1>
+        <!-- <strong id="plane">✈</strong> -->
+        <ul>
+            <li><a href="/#form"> Flights</a> </li>
+            <li><a href="/destinations"> Destinations</a> </li>
+            <li><a href="/#travelling">Travel Style </a> </li>
+            <li><a href="/about">About us </a> </li>
+        </ul>
+        <button type="button" class="contactBtn btn btn-outline-light"  ><a href="tel: 114-621-3010">Call Us</a></button>
+    </nav>
+
+    <!-- making the toggle bar -->
+    <input type="checkbox" id="opensidebarmenu" >
+    <label for="opensidebarmenu" class="sidebarmenutoggle">
+    <div class="spinner tops"></div>
+    <div class="spinner mids"></div>
+    <div class="spinner bots"></div>
+    </label>  
+
+    <div class="sidetoggleopenmenu dropdown" id="dd" onclick="closeDd()">
+    <ul class="menu">
+        <li><a href= "/#form">Flights</a></li> 
+        <li><a href= "/destinations">Destination</a></li> 
+        <li><a href= "/#travelling">Travel Styles</a></li> 
+        <li><a href= "/about">About</a></li> 
+    </ul>
+    </div> 
+    <div class="quote">
+        <h1 class="quote1">Lifelong</h1>
+        <h1 class="quote1">memories,</h1>
+        <h1 class="quote1_1">just a few </h1>
+        <h1 class="quote1_1">seconds away.</h1>
+    </div>
+    <script>
+       function closeDd(){
+        //    alert("HI");
+        document.getElementById("dd").style.transform="translateY(470)";
+       }
+    </script>
