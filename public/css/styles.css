@@ -4,28 +4,296 @@ html,body{
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    height: 100%;
     font-family: 'STIX Two Text', serif;
 }
 
 /* the first section with the nav and form styling*/
 .section1{
-    height: 600px;
-    background-image: url("https://images.unsplash.com/photo-1593182440709-4b7b56482c55?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-position: top;
-    position: relative;
-    padding: 3%;
-    padding-top: 2%;
+  background-image: url("https://media4.giphy.com/media/37QOWrwGOljUCbdDxd/giphy.gif?cid=ecf05e47svt0bje1s3y99wprnh7noif9myvzdv6ze5kgdg0w&rid=giphy.gif&ct=g");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-position: center;
+  position: relative;
+  padding: 3%;
+  padding-top: 2%;
 }
 
+
+/* *************************************************************************** */
+.cover {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+ .blur-in {
+    -webkit-animation: blur 12s forwards;
+    -moz-animation: blur 12s forwards;
+    -o-animation: blur 12s forwards;
+    animation: blur 12s forwards;
+}
+.blur-out {
+    -webkit-animation: blur-out 4s forwards;
+    -moz-animation: blur-out 4s forwards;
+    -o-animation: blur-out 4s forwards;
+    animation: blur-out 4s forwards;
+}
+
+@-webkit-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-moz-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-o-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-webkit-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-moz-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-o-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+.pop-up {
+    position: fixed;
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+    z-index: 10;  
+}
+.pop-up p{
+    margin-top: 0;
+    font-size: 213%;
+    margin-bottom: 1rem;
+    color: gold;
+}
+.box {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #1E3163;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    position: relative;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    padding: 3%;
+    margin-top: 7.5%;
+    width: 67%;
+    padding-top: 5%;
+    border-radius: 10px;
+    color: white;
+}
+.sec1Img{
+    height: 500px;
+    width: 51%;
+    position: absolute;
+    right: 1%;
+    bottom: -1%;
+}
+.noshow{
+    display: none;
+}
+.show{
+    display: block;
+}
+.button {
+    margin: 0 auto;
+    background-color: #FF8566;
+    margin-bottom: 33px;
+}
+.button:hover {
+    background-color: #7CCF29;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+}
+.close-button { 
+    background-color: #8E2657;
+    padding: 3.5px 9px;
+    left: 2px;
+    top: -2px; 
+    transition: all 0.5s ease;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -9px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: white;
+    -webkit-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: -3px 1px 6px 0px rgba(0,0,0,0.1);
+}
+
+.close-button:hover {
+    background-color: tomato;
+    color: #fff;
+}
+
+/* ********************************************************* */
+
+
+.title{
+    text-decoration: none;
+    color: white;
+}
+.title:hover{
+    text-decoration: none;
+    color: white;
+}
+nav{
+  padding-top: 1%;
+  background-color: #009dae;
+  padding-left: 2%;
+  height: 78px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 /* Logo BookWithUs styling*/
 nav h1{
     display: inline-block;
     font-size: 2rem;
     z-index: 31;
+    color:white;
+}
+nav h1 span{
+    font-family: 'Rancho', cursive;
+    letter-spacing: 0.1cm;
 }
 /* nav ul styling*/
 nav ul{
@@ -43,23 +311,22 @@ nav ul li{
     margin-right: 5%;
     font-size:1.1rem ;
     z-index: 10;
-
 }
 /* anchor tag of the nav styling  */
-a{
+.navAnchor a{
    text-decoration: none;
-   color:#57837B;
+   color:white;
    position: relative;
 }
 /* anchor tag of the nav styling  when hovered*/
-a:hover{
-    color:#444941;
+.navAnchor a:hover{
+    color:gold;
 }
 /* insert a straight line (absolute) like underline after the anchor element of width 0 */
-a::after{
+.navAnchor a::after{
     content: "";
     position: absolute;
-    background-color: #57837B;
+    background-color: gold;
     height: 1px;
     width: 0;
     left: 0;
@@ -67,22 +334,38 @@ a::after{
     transition: 0.4s;
 }
 /*when a is hovered make the width of a a after element 100 by transition  */
-a:hover::after{
+.navAnchor a:hover::after{
     width: 100%;
-    color: #57837B;  
+    color: white;  
  }
  /* styling of the call us button of the nav  */
 .contactBtn{
     position: absolute;
-    right: 5%;
+    right: 3%;
     top: 5%;
     z-index: 31;
+    background-color: goldenrod;
+}
+.contactBtn a{
+    color: white;
+    text-decoration: none;
+}
+.contactBtn a:hover{
+    color: white;
+    border: black;
+    text-decoration: none;
+}
+.contactBtn:hover{
+  background-color: goldenrod;
+
 }
 /* the entire drop down nav div  */
 .dropdown{
     margin: 0;
     background-color:#F4DFD0;
     background-color: #F8EDED;
+    background-color: #009dae;
+    opacity: 0.9;
     position: absolute;
     right: 0;
     width:100%;
@@ -90,7 +373,6 @@ a:hover::after{
     top:0;
     overflow: none;
     z-index: 30;
-    /* opacity: 0.8; */
 }
 /* the entire drop down nav div ul  */
 .dropdown ul{
@@ -110,7 +392,7 @@ a:hover::after{
 /* the toggle bar icon styling  */
 .spinner{
     z-index:31;  
-    border-bottom: 3.5px solid black;
+    border-bottom: 3.5px solid white;
     width: 26px;
     height: 9px;
     margin-right: 28px;
@@ -142,6 +424,7 @@ a:hover::after{
       transform: translateY(-470px);      
       transition: transform 300ms ease-in-out;
 }  
+
 /* styling for hiding the side opened toggle menu on checkbox  */
 #opensidebarmenu:checked ~ .sidetoggleopenmenu{
         transform: translateY(0px); 
@@ -150,24 +433,28 @@ a:hover::after{
     transform: translateY(-470px); 
 }
 /* styling of the quote on the left of section 1  */
-.quote{
+.quote {
     position: relative;
     top: 2%;
-}
-/* styling the lines of the quote on the left of section 1  */
-.quote h1{
-    font-family: 'Nunito', sans-serif;
+  }
+  /* styling the lines of the quote on the left of section 1  */
+  .quote h1 {
+    font-family: "Nunito", sans-serif;
     font-size: 40px;
     font-weight: bold;
-}
-/* styling the first 2 lines of the quote on the left of section 1  */
-.quote1{
-    color:#8E2657;
-}
-/* styling the last 2 lines of the quote on the left of section 1  */
-.quote1_1{
-    color:#22577A;
-}
+  }
+  /* styling the first 2 lines of the quote on the left of section 1  */
+  .quote1 {
+    color: #009dae;
+    background-color: #f8eded;
+    display: inline-block;
+  }
+  /* styling the last 2 lines of the quote on the left of section 1  */
+  .quote1_1 {
+    color: #71dfe7;
+    background-color: #f8eded;
+    display: inline-block;
+  }
 /* planes on the hr line  */
 .myplane{
     position: relative;
@@ -222,8 +509,8 @@ a:hover::after{
 /* plane icon on the form line  */
 #plane3{
     position: absolute;
-    left: 45%;
-    top: -10%;
+    left: 50%;
+    top: -5%;
     font-size: 35px;
     z-index: 20;
     color: #1E3163;
@@ -239,75 +526,40 @@ a:hover::after{
 }
 /* the actual form styling  */
 .theForm{
-    background-image: url("https://images.unsplash.com/photo-1591395896364-6db656ac5c2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
+    background-color: #11999E;
+    background-image: url("/images/nick-karvounis-PNHSwLmTTFc-unsplash.jpg");
+    background-image: url("/images/philip-myrtorp-iiqpxCg2GD4-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 240px;
-    margin-top: 1.5%;
-    padding: 1% 2%;
+    padding: 3% 4%;
+    z-index: 3;
+    width: 65%;
     font-size: 18px;
-    border: 2px solid #57837B ;
-    box-shadow: 2px 2px 2px #57837B;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
     position: relative;
     color: white;
+    padding-bottom: 5%;
+    margin: auto;
+    margin-top: 3.5%;
 }
+
 /* styling of every input except radio buttons */
- .box{
-     padding: 0;
-     margin-top:2%;
- }
-/* styling of the form submit btn */
+.box2{
+    background-color: #1E3163;    
+    padding: 0%;
+    padding-top: 2%;
+    border-radius: 10px;
+    width: 65%;
+    margin: auto;
+    margin-top:0.5%;
+
+    }
  .submitBtn{
-     margin: 1%;
-     margin-top: 19%;
-     /* margin-left: %; */
-     text-align: center;
-     align-items: center;
-     width: 200px;  
- }
- /* the second section  */
- .invite{
-     height: 500px;
-     padding: 4%;
-     padding: 12% 6%;
-     position: relative;
-     overflow: hidden;   
- }
- /* Image inside Section 2  */
- #vacation{
-     position: absolute;
-     top: 18%;
-     right: 8%;
-     border-radius: 100%;
-     height: 370px;
-     width: 370px;
-     border: 1px solid #5F7A61;
- }
- /* the text in section 2  */
- .inviteText{
-     background-color: aliceblue;
-     display: inline-block;
-     padding: 2%;
-     padding-left: 5%;
-     width: 52%;
-     height: 270px;
-     font-size: 42px;
- }
- /* the name in the secion 2  */
- .inviteText  i{
-     color: red;
- }
- /* the semi circle around the image  */
- .circleLine{
-     position: absolute;
-     overflow: hidden;
-     right: -15%;
-     top: 0;
-     border: 1px solid #5F7A61;
-     height: 550px;
-     width: 500px;
-     border-radius: 100%;
-     overflow: hidden;
+    margin: auto;
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 10%;
  }
  /* the line afer ever section */
  hr{
@@ -315,30 +567,6 @@ a:hover::after{
     align-items: center;
     align-self: center;
     margin: 4% auto;
-}
-/* section 3 with all travel styles  */
-.travelStyle{
-    text-align: center;
-    margin-top: 7%;
-    position: relative;
-}
-/* the div of each travel style  */
-.styles{
-    height: 450px;
-    width: 25%;
-    margin: 2%;
-    display: inline-block;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1px solid #7FC8A9;
-    box-shadow: 3px 4px 4px #7FC8A9;
-    position: relative;
-}
-/* the div of each travel style when hovered */
-.styles:hover{
-    border: 2px solid blueviolet;  
 }
 /* main heading og section 2  */
 .Sec2Head{
@@ -365,29 +593,6 @@ a:hover::after{
     height: 40px;
     font-family: 'Bad Script', cursive;
     padding-top: 5%;
-}
-/* family trip div one  */
-.style1{
-    background-image: url("https://images.unsplash.com/photo-1587654542342-c6f9bf970132?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-}
-/* solo trip div 2 */
-.style2{
-    position: relative;
-    padding-top: 10%;
-    background-image: url("https://images.unsplash.com/photo-1583838812711-91e66580f5e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80");
-}
-/* solo written on solo trip div */
-.style2box{
-    position: absolute;
-    top: 0;
-    font-family: 'Bad Script', cursive;
-    padding: 4%;
-    width: 100%;
-}
-/* honeymoon trip div 3 */
-.style3{
-    background-image: url("https://images.unsplash.com/photo-1591030288156-ededef494ec4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-    background-image: url("https://images.unsplash.com/photo-1623137285582-8a3608b5ff09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"); 
 }
 /* the long hr line in the travel style section  */
 .longLine{
@@ -427,31 +632,31 @@ a:hover::after{
     right: 0;
 }
 /* section 3 the footer  */
-.myFooter{
-    height: 150px;
-    background-color: #7FC8A9;
-}
-/* div inside the footer section containing all elements */
-.footer{
-    background-color: #66BFBF;
-    height: 200px;
-}
+.myFooter {
+    font-family: "Montserrat", sans-serif;
+    background-color: #c2fff9;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  /* div inside the footer section containing all elements copyright */
+  .footer {
+    font-family: "Montserrat", sans-serif;
+    background-color: #c2fff9;
+    padding: 5%;
+    text-align: justify;
+    margin: 0;
+  }
 /* anchor tags of the footer section  */
 .footer a{
     text-decoration: none;
-    color: #11999E;
-    font-size: 1.7vw;
+    color: black;
     display: inline-block;
-    margin: 3% 5% 3% 5%;   
 }
 /* anchor tags of the footer section when hovered  */
 .footer a:hover{
   text-decoration: none;
-  color: white;
-  font-size: 1.7vw;
+  color: goldenrod;
   display: inline-block;
-  margin: 1% 5% 3% 5%;
-  margin-top: 1%;   
 }
 /* the first link of the footer section  */
 #link1{
@@ -459,10 +664,29 @@ a:hover::after{
 }
 /* the copywright at the end of the section  */
 .footer p{
-  color: white;
+  color: black;
+  text-align: left;
+  font-weight: 100;
+}
+.footer h3{
+    color: goldenrod;
+}
+.disclaimer a:hover{
+    color: black;
+}
+.copyright{
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #c2fff9;
+  color: black;
   text-align: center;
-  margin-top: 3%;
-  font-size: 1.4vw;
+  padding-top: 2%;
+  height: 60px;
+}
+.copyright p{
+    margin: 0;
 }
 /* the dotted hr line  */
 .dottedLine{
@@ -475,7 +699,6 @@ a:hover::after{
 .page2Content{
     padding: 3%;
     padding-bottom: 1%;
-    /* background-color: aliceblue; */
     text-align: center;   
 }
 .page2Heading{
@@ -498,9 +721,9 @@ a:hover::after{
     position: relative;
     margin-bottom: 10%;
 }
-.row{
-    padding: 2% 4%;
-    padding-left: 8%;
+.row1{
+    padding: 1% 4%;
+    padding-left: 4%;
     
 }
 .places div p{
@@ -523,7 +746,7 @@ a:hover::after{
     font-size: 20px;
     width: 55%;
     height: 40px;
-    background-color: #11999E;
+    background-color: #F8EDED;
     padding: 3%;
     text-align: center;
 }
@@ -536,37 +759,211 @@ a:hover::after{
 font-size: 18px;
 }
 .card{
-    /* border: 1px solid gray; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card:hover{
     border: 2px solid #11999E;
 }
-.page3content{
-    /* background-color: #11999E; */
-    margin-top: 5%;
+.deals1{
+    align-self: center;
+    background-color: #009dae;
+    width: 90%;
+    margin: auto;
+    padding: 4% 4%;
+    border-radius: 15px;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-.page3content h1{
-    text-align: center;
-    font-family: 'Bad Script', cursive;
-    font-size: 70px;
+.bookmarks{
+    position: absolute;
+    top: -0.1%;
+    color: gold;
+    font-size: 40px;
+    right: 4%;
 }
-.page3content p{
+.deals1 h1{
+    color: white;
+    margin-bottom: 2%;
+}
+.deals span{
 font-size: 20px;
+position: absolute;
+right: -1%;
 padding: 2%;
-text-align: justify;
+top: 8%;
+color: black;
+background-color: gold;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-top-left-radius:15px ;
+border-bottom-left-radius:15px ;
 }
-.page3img{
+.deals p{
+    text-align: center;
+    }
+.tilecard{
+    transition: transform .2s;
+    padding: 2%;
+}
+.tilecard:hover {
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .tileImg{
+      width: 100%;
+      height: 200px;
+  }
+  .services{
+    background-color: #009dae;
+    width: 100%;
+    text-align: center;
+}
+.servicesDiv{
+    padding: 5%;
+    color: white;
+    margin-bottom:2% ;
+    width: 100%;
+}
+.pricetd{
+    font-size: 18px;
+}
+
+.services h3{
+    text-align: center;
+}
+.hotDeals{
+    width: 98%;
+    margin: auto;
+}
+.aboutDiv{
+    background-image: url("/images/nick-karvounis-PNHSwLmTTFc-unsplash.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 260px;
+    position: relative;
+    margin-top: 2%;
+    align-items: center;
+    padding-top: 7%;
+}
+.aboutDiv h2{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #1E3163;
+    opacity: 0.4;
+    position: absolute;
+    bottom: -2%;
+    height: 100%;
+    color: black;
+}
+.aboutDiv h1{
+    color: black;
+    font-size: 3.2em;
+    text-align: center;
+}
+.aboutContent{
+    width: 96%;
+    margin: auto;
+    margin-top: 2%;
+    padding: 3%;
+}
+.aboutImg{
+    margin: auto;
+    margin-top: 3%;
+    margin-left: 2%;
     float: right;
-    height: 450px;
-    width: 400px;  
-    margin: 2%;
+    width: 300px; 
+    height: 300px;
+    border-radius: 100%;
 }
+.aboutContent p{
+    text-align: justify;
+}
+.aboutCard{
+  padding: 4%;
+  padding-top: 6%;
+  color: #009dae;
+  text-align: center;
+  height: 200px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.aboutCard h3{
+    color: #1E3163;
+}
+.flightData{
+    width: 100%;
+    padding-top: 2%;
+}
+.removeSide{
+    display: block;
+}
+.flightTable{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+}
+.flightDiv{
+    padding: 2%;
+}
+.flightSide{
+    padding-left: 8%;
+    background-color: #cccccc;
+    margin-top: 6%;
+    padding-top: 7%;
+    text-align: left;
+}
+.tableRow td{
+    padding: 2% 0%;
+}
+.myBoxshadow{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    text-align: justify;
+    padding: 3%;
+    margin: 3%;
+    background-color: white;
+}
+.myBoxshadow h2{
+   color: #1E3163; 
+   text-decoration: underline;   
+
+}
+.termsContent{
+    width: 75%;
+    margin: auto;
+    padding-top: 0.5%;
+    padding-bottom: 1.5%;
+    margin-top: 2%;
+    background-image: url("/images/pascal-meier-UYiesSO4FiM-unsplash\ \(1\).jpg");
+}
+
+
+@media (min-width:993px) and  (max-width:1240px){
+    nav ul {
+        display: inline-block;
+        width: 60%;
+        margin-left: 4.3%;
+        z-index: 10;
+    }
+}
+
+
 /* Media query for medium devices  */
-@media (min-width:560px) and  (max-width:992px){
+@media (min-width:638px) and  (max-width:992px){
 /* entire section 1 */
 .section1{
         height: 960px;
+    }
+    nav{
+        height: 100px;
     }
 /* nav logo BookWithUs styling */
 nav h1{
@@ -589,6 +986,7 @@ nav ul {
     cursor: pointer;
     display: inline-block;
       }
+    
 /* the dropdown toggle menu  */
 .sidetoggleopenmenu{
     display: block;
@@ -603,7 +1001,7 @@ nav ul {
 /* entire quote div on the left of section 1 */
 .quote{
     position: relative;
-    top: 16%;
+    top: 2%;
     }
 /* each quote h1 on the left of section 1 */
 .quote h1{
@@ -614,15 +1012,16 @@ nav ul {
     }
 /* the entire form  */
 .theForm{
-     margin-top: 19%;
      padding: 2%;
      padding-left: 2%;
-     margin-top: 27%;
-     height: 520px;
+     margin-top: 7%;
+     width: 75%;
     }
 /* each input of the form excepr radio buttons  */
-.box{
-    padding: 1%;
+.box1{
+    padding: 5%;
+    padding-top: 2%;
+    border-radius: 10px;
     margin-top:0.5%;
     }
 /* class added to input boxes that should take 50% width on medium screen  */
@@ -631,7 +1030,7 @@ nav ul {
     }
 /* submit button of the form  */
 .submitBtn {
-        margin: 9% auto 0 auto;
+        margin: auto;
     }
 /* plane icon on the form line  */
 #plane3{
@@ -719,16 +1118,51 @@ text-align: justify;
     height: 350px;
     width: 300px;
     }
+.tilecard{
+    padding: 2%;
+    margin: auto;
+    margin-bottom: 6%;
+    }  
+.aboutDiv h1 {
+    color: black;
+    font-size: 3.1em;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    right: 36%;
 }
-
-
-
-
+.aboutImg {
+    margin: auto;
+    margin-top: 9%;
+    margin-left: 2%;
+    float: right;
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+}
+.removeSide{
+    display: none;
+}
+.flightData{
+    font-size: 14px;
+    width: 95%;
+    margin: auto;
+}
+.pricetd{
+    font-size: 14px;
+}
+.btn-md{
+    font-size: 12px;
+}
+}
 
 
 /* media query for small devices  */
 @media (max-width:560px)
 {
+    nav{
+        height: 89px;
+    }
 /* nav logo BookWithUs styling */
 nav h1{
     display: inline-block;
@@ -747,8 +1181,12 @@ nav ul {
       }
 /* individual toggle lines styling */
 .sidebarmenutoggle{
-    cursor: pointer;
     display: inline-block;
+    z-index: 31;
+    cursor: pointer;
+    position: absolute;
+    padding: 1%;
+    
       }
 /* the dropdown toggle menu  */
 .sidetoggleopenmenu{
@@ -760,15 +1198,18 @@ nav ul {
     text-align:center;
     margin-top: 30%;
     }
+.theForm{
+    width: 93%;
+    }
 /* the callus button     */
 .contactBtn{
-    left: 4%;
-    top: 8%;
+    right: 7%;
+    top: 17%;
     }
 /* the entie quote div of the left side of section 1 */
 .quote{
     position: relative;
-    top: 16%;
+    top: 2%;
     }
 /* each quote h1 on the left of section 1 */
 .quote h1{
@@ -778,11 +1219,10 @@ nav ul {
     font-weight: bold;
     }
 .theForm{
-    /* margin-top: 1125%; */
     padding: 5%;
     padding-left: 8%;
-    margin-top: 55%;
-    height: 495px;
+    margin-top: 10%;
+    height: 563px;
    }
 /* entire section 1 */
 .section1{
@@ -829,6 +1269,11 @@ nav ul {
     height: 250px;
     width: 250px;
     }
+    .contactBtn {
+        background-color: goldenrod;
+        top: 16.7%;
+        right: 0;
+    }
 /* planes on the hr line  */
 .myplane{
     margin-top: 7%;
@@ -851,42 +1296,78 @@ nav ul {
     }
 /* the long hr line in the travel section  */
 .longLine{
-        width: 100%;
-        position: absolute;
-        top: 56%;
-    }
+    width: 100%;
+    position: absolute;
+    top: 56%;
+}
 /* section 3 contact  */
-    .contact{
-        height: 310px;  
-    }
+.contact{
+    height: 310px;  
+}
 /* the text div of the contact section  */
-    .contactLeft{
-        top: 20%;
-    }
+.contactLeft{
+    top: 20%;
+}
 /* the picture div of the contact section  */
-    .contactRight{
-        height: 310px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+.contactRight{
+    height: 310px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.page3content{
+    /* background-color: #11999E; */
+    margin-top: 30%;
+}
+.page3content h1{
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+    font-size: 40px;
+}
+.page3content p{
+font-size: 16px;
+padding: 2%;
+text-align: justify;
+}
+.page3content img{
+    height: 250px;
+    width: 200px;
     }
-    .page3content{
-        /* background-color: #11999E; */
-        margin-top: 30%;
+    .tilecard {
+        transition: transform .2s;
+        margin: auto;
+        margin-top: 5%;
     }
-    .page3content h1{
+    .aboutDiv h1 {
+        color: black;
+        font-size: 2.5em;
         text-align: center;
-        font-family: 'Bad Script', cursive;
-        font-size: 40px;
+        position: absolute;
+        top: 34%;
+        right: 31%;
     }
-    .page3content p{
-    font-size: 16px;
-    padding: 2%;
-    text-align: justify;
-    }
-    .page3content img{
-        height: 250px;
+    .aboutImg {
+        margin: auto;
+        margin-top: -1%;
+        margin-left: 2%;
+        float: right;
         width: 200px;
-        }
+        height: 200px;
+        border-radius: 100%;
+    }
+    .removeSide{
+        display: none;
+    }
+    .flightData{
+        font-size: 12px;
+        margin: auto;
+        width: 95%;
+    }
+    .pricetd{
+        font-size: 12px;
+    }
+    .btn-md{
+        font-size: 12px;
+    }
 }

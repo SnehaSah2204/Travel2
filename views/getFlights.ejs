@@ -1,0 +1,121 @@
+<%- include("partials/header")-%>
+<section style="background-color: #edebe9; height: 100%;" >
+  
+<div  id="overlay" class="cover blur-in"   >
+
+<div  class="row ">
+  <div class="col-lg-3 col-md-3 col-sm-3 flightDiv removeSide">
+
+    <div class="flightSide">
+      <button type="button" class="btn btn-primary">Get Fare Alerts <i class="fas fa-bell"></i></button><br><br><br>
+      <h4>Filter Your Results</h4>
+      <p>65 results found</p>
+      <h4>Stops</h4>
+      <input type="checkbox" >&nbsp;1 Stop <br>
+      <input type="checkbox" >&nbsp;2 Stops <br><br>
+      <h4>Flight Times</h4>
+    
+      <p><b>Going</b> to <%=quotes[0].destination%> </p>
+      <p>Depart</p>
+      <div class="slidecontainer">
+        <p>Duration</p>
+        <input type="range" min="1" max="24" value="" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+      </div>
+      
+      <p><b>Return</b> to <%=quotes[0].origin%> </p>
+      <p></p>
+      <div class="slidecontainer">
+        <p>Duration</p>
+        <input type="range" min="1" max="24" value="" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+      </div>
+    
+      <h4>Dates</h4>
+      <input type="checkbox" >&nbsp;Show Alternative Dates<br>
+      <input type="checkbox" >&nbsp;Same Day Return<br><br><br>
+    </div>
+
+  </div>
+  <div class="col-lg-9 col-md-12 col-sm-12 flightDiv">
+    <div class="flightData " style="font-family: 'Noto Sans Mono', monospace;;">
+      <table class="table .table-striped flightTable">
+          <thead>
+            <tr>
+              <th>Flight</th>
+              <th scope="col">Type</th>
+              <th scope="col">Departure</th>
+              <th scope="col">Price</th>
+              <th scope="col">Gate</th>
+              <th scope="col">Return</th>
+              <th scope="col">Book</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr>
+             
+            </tr>
+            <tr>
+              <th></th><th></th><th></th><th></th><th></th><th></th><th>       
+            </tr>
+            <% quotes.forEach(function(quote){ %>
+            <tr class="tableRow">
+              <%var i=0;%>
+    
+              <td style="font-weight: bold;color: #1E3163; padding-left: 2%;"><%=quote.origin%> ✈ <%=quote.destination%></td>
+                <% var type= quote.actual?"Direct":"Indirect"; %>
+              <td> <%=type%></td>
+              <td> <%= quote.depart_date%></td>
+              <td style="font-weight: bold;color:#DC1C13;" class="pricetd"><%=currency%> $ <%= quote.value%> Per Person</td>
+              <td ><%=quote.gate %></td>
+              <td > <%= quote.return_date%></td>
+              <td><button type="button" class="btn btn-success btn-md">Select</button></td>
+            </tr>
+            <%});%>
+          </tbody>
+        </table>
+        <br>  
+  </div>
+</div>  
+
+</div>
+  </div>
+
+  <div id="popup" class="row pop-up" style="display: none;"> 
+    
+    <div class="row box2 small-6 large-centered">
+      <div class="col-lg-3 col-md-12  callCenter " style="text-align: center;">
+        <img src="/images/woman.jpg" width="180px"  style="margin:auto; margin-top:84px ; border-radius: 100%;" alt="">
+      </div>
+      <div class="col-lg-8 col-md-12 callCenter" style="padding: 4%; padding-left: 5%;">
+        <h2 style="color: white;">Speak To a Travel Expert Now</h2><br>
+        <p style="text-decoration: underline;">Call us now to get up to 40% OFF on Call Center Fares! </p>
+        <h2><span style="color: gold;text-decoration: underline;"><i class="fas fa-phone-alt"></i>  866-280-6878</span></h2>
+        <a href="tel:866-280-6878">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+    
+    setTimeout(function(){
+
+    // $('.pop-up').removeClass('noshow');
+    // $('.pop-up').addClass('show');  
+    $("#popup").css("display", "block");
+    $('.pop-up').hide();
+    $('.pop-up').fadeIn(2000);
+    $('.close-button').click(function (e) { 
+          console.log("hello")
+        $('.pop-up').fadeOut(700);
+        $('#overlay').removeClass('blur-in');
+        $('#overlay').addClass('blur-out');
+        e.stopPropagation();
+
+      });
+
+    }, 1000);
+      
+  </script>
+</section>
+
